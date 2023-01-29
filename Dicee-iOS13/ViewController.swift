@@ -19,12 +19,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageCube2: UIImageView!
     
     @IBAction func rollButtonPressed(_ sender: UIButton) {
-        let arrayCube = [UIImageView(image: "DiceOne"), UIImageView(image: "DiceTwo" )]
+        let arrayCube = [UIImage(named: "DiceOne"), UIImage(named: "DiceTwo"), UIImage(named: "DiceThree"), UIImage(named: "DiceFour"), UIImage(named: "DiceFive"), UIImage(named: "DiceSix")]
         
-        imageCube1.image = arrayCube.randomElement()
-        imageCube2.image = arrayCube.randomElement()
+        imageCube1.image = arrayCube[Int.random(in: 0...5)]
+        imageCube2.image = arrayCube[Int.random(in: 0...5)]
     }
-    
-
 }
 
